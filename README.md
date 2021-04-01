@@ -4,3 +4,5 @@ Here is a little one-day project where I tried out using API requests for the fi
 
 **Customization:**
 Simply fill in your Wi-Fi login info (I experimented by used multiple possible Wi-Fi logins for this one) and customize the three chosen cryptocurrencies to be displayed by replacing the IDs and tickers/names.
+
+![alt text](https://github.com/amartora/cryptoESP/blob/main/cryptoESPHeltec32.jpg)
