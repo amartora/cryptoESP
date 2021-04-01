@@ -30,7 +30,7 @@ void setup(){
   
     Serial.println("Connecting to Wi-Fi...");
     Heltec.display -> drawString(0, 0, "Connecting to Wi-Fi...");
-    Heltec.display->display();
+    Heltec.display -> display();
     
     wifiMulti.addAP(SSID1, PW1);
     wifiMulti.addAP(SSID2, PW2);
@@ -44,14 +44,14 @@ void setup(){
         Heltec.display -> drawString(0, 0, "Wi-Fi connected");
         Heltec.display -> drawString(0, 10, "IP address: ");
         Heltec.display -> drawString(0, 20, WiFi.localIP().toString());
-        Heltec.display->display();
+        Heltec.display -> display();
     }
   }
 }
 
 void loop(){
   
-  Heltec.display->clear();
+  Heltec.display -> clear();
   Heltec.display -> setFont(ArialMT_Plain_16);
   
   if(wifiMulti.run() != WL_CONNECTED) { //chcking to make sure we are connected to Wi-Fi
@@ -64,7 +64,7 @@ void loop(){
   HTTPClient http;
 
     //creating the GET request URL here... I found this by using the tools on https://www.coingecko.com/en/api#explore-api
-    String requestURL = "https://api.coingecko.com/api/v3/simple/price?ids=" + coinID[0] + "%2C" + coinID[1] + "%2C" + coinID[2] +"&vs_currencies=usd&include_market_cap=false&include_24hr_change=true&include_last_updated_at=true";
+    String requestURL = "https://api.coingecko.com/api/v3/simple/price?ids=" + coinID[0] + "%2C" + coinID[1] + "%2C" + coinID[2] + "&vs_currencies=usd&include_market_cap=false&include_24hr_change=true&include_last_updated_at=true";
     
     http.begin(requestURL);
 
@@ -96,13 +96,13 @@ void loop(){
       Serial.println("HTTP request error");
       Heltec.display -> setFont(ArialMT_Plain_10);
       Heltec.display -> drawString(0, 52, "HTTP request error");
-      Heltec.display->display();
+      Heltec.display -> display();
       Heltec.display -> setFont(ArialMT_Plain_16);
     }
 
-    Heltec.display->display();
+    Heltec.display -> display();
     
     http.end();
 
-    delay (10000);
+    delay (10000); //change this to have more or less frequent updates
 }
