@@ -57,7 +57,9 @@ void loop(){
   if(wifiMulti.run() != WL_CONNECTED) { //chcking to make sure we are connected to Wi-Fi
       Serial.println("Wi-Fi not connected!");
       Heltec.display -> clear();
+      Heltec.display -> setFont(ArialMT_Plain_10);
       Heltec.display -> drawString(0, 0, "Wi-Fi not connected!");
+      Heltec.display -> setFont(ArialMT_Plain_16);
       delay(1000);
   }
 
