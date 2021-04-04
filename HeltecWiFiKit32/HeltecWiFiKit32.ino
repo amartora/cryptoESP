@@ -118,8 +118,6 @@ void loop(){
   
         attachInterrupt(buttonPin, ISR, FALLING); //attaching interrupt to button pin to trigger ISR when the pin goes from high to low (FALLING)
   
-        startLoop:
-  
         if (dispMode == 0){
        
           Serial.println(coinPrice1);
