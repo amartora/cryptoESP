@@ -161,7 +161,7 @@ void loop(){
     
     skipWait = 0;
     
-    for (int i; i < 10000; i++){  //change the amount of max loops to have more or less frequent updates
+    for (int i = 0; i < 10000; i++){  //change the amount of max loops to have more or less frequent updates
       delay (1);
       if (skipWait == 1){
         break;
