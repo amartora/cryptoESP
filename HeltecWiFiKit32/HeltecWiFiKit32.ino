@@ -150,7 +150,6 @@ void loop(){
         Serial.println("HTTP request error");
         Heltec.display -> setFont(ArialMT_Plain_10);
         Heltec.display -> drawString(0, 52, "HTTP request error");
-        Heltec.display -> display();
         Heltec.display -> setFont(ArialMT_Plain_16);
       }
   
